@@ -9,8 +9,8 @@ fastify.post("/api-tort/user", { preHandler: fastify.multipart }, createUser)
 fastify.get("/api-tort/users", getUsers)
 
 fastify.post("/api-tort/work-shift", createWorkShift)
-fastify.post("/api-tort/work-shift/:id/open", openWorkShift)
-fastify.post("/api-tort/work-shift/:id/close", closeWorkShift)
+fastify.get("/api-tort/work-shift/:id/open", openWorkShift)
+fastify.get("/api-tort/work-shift/:id/close", closeWorkShift)
 fastify.post("/api-tort/work-shift/:id/user", setUserWorkShift)
 
 const start = async () => {
